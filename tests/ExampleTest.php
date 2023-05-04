@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Pforret\Digestif\Tests;
 
 use PHPUnit\Framework\TestCase;
 
