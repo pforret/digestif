@@ -1,4 +1,4 @@
-# This is my package digestif
+# Digestif helps you create unique unguessable URLs
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/pforret/digestif.svg?style=flat-square)](https://packagist.org/packages/pforret/digestif)
 [![Tests](https://img.shields.io/github/actions/workflow/status/pforret/digestif/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/pforret/digestif/actions/workflows/run-tests.yml)
