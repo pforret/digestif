@@ -19,6 +19,8 @@ composer require pforret/digestif
 ## Usage
 
 ```php
+use Pforret\Digestif\Digestif;
+
 $dig = new Digestif(env("DIGEST_SEED"));
 // seed value should be unique for that server/application.
 // It's important that it is not known to the outside world.
