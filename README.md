@@ -4,15 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/pforret/digestif/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/pforret/digestif/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/pforret/digestif.svg?style=flat-square)](https://packagist.org/packages/pforret/digestif)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/digestif.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/digestif)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Package to create a digest of a string/array, to be used in creating unique unguessable URLs/folder names.
 
 ## Installation
 
@@ -25,8 +17,12 @@ composer require pforret/digestif
 ## Usage
 
 ```php
-$skeleton = new Pforret\Digestif();
-echo $skeleton->echoPhrase('Hello, Pforret!');
+$dig = new Digestif(env("DIGEST_SEED"));
+$url = "$url_root/$package_id";
+$digest = $dig->fromString($url);
+$secure_url = "$url/$digest";
+// or 
+$secure_url = "$url?$digest";
 ```
 
 ## Testing

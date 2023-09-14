@@ -32,14 +32,14 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
+        "test": "vendor/bin/phpunit --testdox",
             "test-coverage": "vendor/bin/phpunit --coverage",
         "format": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            
+
             "phpstan/extension-installer": true
         }
     },
