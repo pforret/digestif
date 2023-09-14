@@ -18,11 +18,22 @@ composer require pforret/digestif
 
 ```php
 $dig = new Digestif(env("DIGEST_SEED"));
-$url = "$url_root/$package_id";
+// seed value should be unique for that server/application.
+// It's important that it is not known to the outside world.
+// It should be the same for the application creating the Digest as the one reading/verifying it 
+$url = "https://secure.example.com/invoice/1200323";
+// if you make your URL like this, the URL for the other invoices can be guessed (e.g. 1200324, etc)
 $digest = $dig->fromString($url);
 $secure_url = "$url/$digest";
-// or 
+// URL = https://secure.example.com/invoice/1200323/0a1b-2c3d
+// using a route /invoice/{id}/{digest} will allow you to verify the digest
+// the URL of the next invoice 1200324 cannot be guessed without knowing the seed value
+
 $secure_url = "$url?$digest";
+// URL = https://secure.example.com/invoice/1200323?0a1b-2c3d
+// verify the digest with $dig->verify($url, $digest)
+``` 
+
 ```
 
 ## Testing
