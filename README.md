@@ -4,6 +4,8 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/pforret/digestif/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/pforret/digestif/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/pforret/digestif.svg?style=flat-square)](https://packagist.org/packages/pforret/digestif)
 
+![](assets/unsplash.digestif.jpg)
+
 Package to create a digest of a string/array, to be used in creating unique unguessable URLs/folder names.
 
 ## Installation
